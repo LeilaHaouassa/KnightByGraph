@@ -6,47 +6,7 @@ namespace KnightBilGraph
 {
     class Algo
     {
-        //public Func<Node, IEnumerable<Node>> ShortestPathFunction(Graph graph, Node source)
-        //{
-
-        //    var previous = new Dictionary<Node, Node>();
-
-        //    var queue = new Queue<Node>();
-        //    queue.Enqueue(source);
-
-        //    while (queue.Count > 0)
-        //    {
-        //        var vertex = queue.Dequeue();
-        //        foreach (var neighbor in vertex.Neighbours)
-        //        {
-        //            if (previous.ContainsKey(neighbor))
-        //                continue;
-
-        //            previous[neighbor] = vertex;
-        //            queue.Enqueue(neighbor);
-        //        }
-        //    }
-
-        //    Func<Node, IEnumerable<Node>> shortestPath = v =>
-        //    {
-        //        var path = new List<Node> { };
-
-        //        Node current = v;
-        //        while (!current.Equals(source))
-        //        {
-        //            path.Add(current);
-        //            current = previous[current];
-        //        };
-
-        //        path.Add(source);
-        //        path.Reverse();
-
-        //        return path;
-        //    };
-
-        //    return shortestPath;
-
-        //}
+        
 
         public bool BFS(ref Node src, ref Node dest)
         {
@@ -92,7 +52,7 @@ namespace KnightBilGraph
         {
 
 
-            //int dist[v];
+            
 
             if (BFS(ref src, ref dest) == false)
             {
@@ -110,13 +70,7 @@ namespace KnightBilGraph
                 current = current.previous;
             }
             return path;
-            // distance from source is in distance array 
-
-
-            // printing path from source to destination 
-            //Console.WriteLine( "\nPath is::\n");
-            //for (int i = path.Count - 1; i >= 0; i--)
-            //     Console.Write("( "+path[i].ValueX+" , "+path[i].ValueX+" )   ");
+           
         }
 
 
@@ -126,28 +80,7 @@ namespace KnightBilGraph
 
 
 
-        //public List<Node> GetBestPath(List<Node> last, Node target)
-        //{
-        //    List<Node> best = null;
-
-        //    foreach (var next in last[last.Count-1].Neighbours)
-        //    {
-        //        if (!next.IsChecked)
-        //        {
-        //            next.IsChecked = true;
-        //            last.Add(next);
-        //            List<Node> e = GetBestPath(last, target);
-
-        //            if( e.Count > best.Count || best == null )
-        //            {
-        //                best = e;
-        //            }
-
-        //        }
-        //        if (next.ValueX == target.ValueX && next.ValueX == target.ValueX) { break; }
-        //    }
-        //    return best;
-        //}
+       
 
 
     }
